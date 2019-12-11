@@ -1,0 +1,27 @@
+{
+  "name": "micon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "micontest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "",
+    "crypto": "",
+    "https": "",
+    "md5": "",
+    "mysql": "",
+    "mysql2": "",
+    "node-telegram-bot-api": "",
+    "querystring": "",
+    "timestamp": "",
+    "url": "",
+    "request": "",
+    "http": "",
+    "crypto-js": "",
+    "sequelize": ""
+  }
+}
