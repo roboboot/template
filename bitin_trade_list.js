@@ -1,9 +1,9 @@
 var mysql = require('mysql');
 var dbconn = mysql.createConnection({
-    host     : 'bitin-test.cljmcewzltc4.ap-northeast-2.rds.amazonaws.com',
+    host     : 'rtrcoin.cljmcewzltc4.ap-northeast-2.rds.amazonaws.com', // CONFIG!!!
     user     : 'roboboot',
     password : 'fhqhqnxm123!K',
-    database : 'bitin'
+    database : 'rtr' // CONFIG!!!
 });
 dbconn.connect();
 const secondOfDay = 86400000;
