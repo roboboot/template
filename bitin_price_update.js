@@ -36,8 +36,6 @@ var standard_last1;
 var standard_last2;
 var current_last;
 var rate;
-const market = 'INCASH';
-const currency = 'WXB';
 
 var getNonce = function() {
 				
