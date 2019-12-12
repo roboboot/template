@@ -71,7 +71,7 @@ async function orderList(TIMESTAMP) {
     }
     let r = await axios.get(URL, config);
     if(JSON.stringify(r.data.data) == '[]') {
-        //bot.sendMessage(chatId, new Date(Math.floor(TIMESTAMP + 300) * 1000).toString() + " [volume_bot] is not working. CHECK PLEASE!! [" + currency + "]");
+        bot.sendMessage(chatId, new Date(Math.floor(TIMESTAMP + 300) * 1000).toString() + " [volume_bot] is not working. CHECK PLEASE!! [" + currency + "]");
     }
 }
 
@@ -148,7 +148,7 @@ setInterval(() => {
                 price_update_check_stack++;
                 if(price_update_check_stack >= 3) {
                     price_update_check_stack = 0;
-                    //bot.sendMessage(chatId, new Date(NOWTIME).toString() + " [price_update] is not working. CHECK PLEASE!! [" + currency + "]");
+                    bot.sendMessage(chatId, new Date(NOWTIME).toString() + " [price_update] is not working. CHECK PLEASE!! [" + currency + "]");
                 }
             }else {
                 price_update_check_before = price_update_check;
