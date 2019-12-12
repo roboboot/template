@@ -71,7 +71,7 @@ function orderBook() {
     }    
     // Configure the request
     var options = {
-        url: `${API_URL}/public/orderbook/INCASH/WXB`,
+        url: `${API_URL}/public/orderbook/KRW/RTR`,
         method: 'GET',
         headers: headers,
         qs: {}
