@@ -1,17 +1,19 @@
 const TelegramBotApi = require("node-telegram-bot-api");
 const bot = new TelegramBotApi('964723803:AAFC0iRCW2I4oWBf1Ak0MDK7lic3K04fiaQ');
 const chatId = 825830374;
-const market = 'INCASH';
-const currency = 'WXB';
+const APIKEY = 'px613966s-6563-7r29-b14s-es2wv5h7xd9'; // CONFIG!!!
+const APISECRET = '94rsn7os36315x571j2av1akrkn4x674'; // CONFIG!!!
+const market = 'KRW'; // CONFIG!!!
+const currency = 'RTR'; // CONFIG!!!
 const axios = require('axios');
 var CryptoJS = require("crypto-js");
 
 var mysql = require('mysql');
 var dbconn = mysql.createConnection({
-    host     : 'bitin-test.cljmcewzltc4.ap-northeast-2.rds.amazonaws.com',
+    host     : 'rtrcoin.cljmcewzltc4.ap-northeast-2.rds.amazonaws.com', // CONFIG!!!
     user     : 'roboboot',
     password : 'fhqhqnxm123!K',
-    database : 'bitin'
+    database : 'rtr' // CONFIG!!!
 });
 
 var getNonce = function() {
@@ -41,7 +43,7 @@ var makeSignature = function(secretKey, access_token, nonce, url, param) {
 };
 
 async function orderBook() {
-    let URL = 'https://apis.korcx.com/v1/public/orderbook/'+market+'/'+currency;
+    let URL = 'https://apis.coinhole.kr/v1/public/orderbook/'+market+'/'+currency;
     let nonce = getNonce();
     let config = {
         headers: {
@@ -57,7 +59,7 @@ async function orderBook() {
 async function orderList(TIMESTAMP) {
     TIMESTAMP = TIMESTAMP / 1000;
 
-    let URL = 'https://apis.korcx.com/v1/public/order/'+market+'/'+currency;
+    let URL = 'https://apis.coinhole.kr/v1/public/order/'+market+'/'+currency;
     let nonce = getNonce();
     let config = {
         headers: {

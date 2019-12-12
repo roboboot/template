@@ -10,10 +10,10 @@ const axios = require('axios');
 const CryptoJS = require('crypto-js');
 const querystring = require('querystring');
 
-const APIKEY = 'bb88a69d-d9e9-41a1-bda9-9c3956aab401';
-const APISECRET = 'STQjXG9Iud778Kq5J4AgTgcbawK8km0G';
-const market = 'INCASH';
-const currency = 'WXB';
+const APIKEY = 'to1u47b57-zun6-285m-5519-ey8edt31aol'; // CONFIG!!!
+const APISECRET = '9966y348x2zagi1c96zp4v0z5rf4mw05'; // CONFIG!!!
+const market = 'KRW'; // CONFIG!!!
+const currency = 'RTR'; // CONFIG!!!
 const price_decimal_place = 1;
 const amount_decimal_place = 3;
 const minimum_unit = parseFloat(0.1);
@@ -21,10 +21,10 @@ const type = 'bid';
 
  
 var dbconn = mysql.createConnection({
-    host     : 'bitin-test.cljmcewzltc4.ap-northeast-2.rds.amazonaws.com',
+    host     : 'rtrcoin.cljmcewzltc4.ap-northeast-2.rds.amazonaws.com', // CONFIG!!!
     user     : 'roboboot',
     password : 'fhqhqnxm123!K',
-    database : 'bitin'
+    database : 'rtr' // CONFIG!!!
 });
 
 var getNonce = function() {
@@ -54,7 +54,7 @@ var makeSignature = function(secretKey, access_token, nonce, url, param) {
 };
 
 async function orderBook() {
-    let URL = 'https://apis.korcx.com/v1/public/orderbook/'+market+'/'+currency;
+    let URL = 'https://apis.coinhole.kr/v1/public/orderbook/'+market+'/'+currency;
     let nonce = getNonce();
     let config = {
         headers: {
@@ -85,7 +85,7 @@ async function trade(price, amount) {
     console.log(param.orderPc)
     console.log(param.orderQy)
 
-    let URL = 'https://apis.korcx.com/v1/order/sendform';
+    let URL = 'https://apis.coinhole.kr/v1/order/sendform';
     let nonce = getNonce();
     let signature = makeSignature(APISECRET, access_token, nonce, URL, JSON.stringify(param));
     let config = {
@@ -106,7 +106,7 @@ async function trade(price, amount) {
 
 async function unsolved() {
 
-    let URL = 'https://apis.korcx.com/v1/order/activeorder/'+market+'/'+currency;
+    let URL = 'https://apis.coinhole.kr/v1/order/activeorder/'+market+'/'+currency;
     let nonce = getNonce();
     let signature = makeSignature(APISECRET, access_token, nonce, URL, '');
     let config = {
@@ -126,7 +126,7 @@ async function unsolved() {
 
 async function cancelAll() {
 
-    let URL = 'https://apis.korcx.com/v1/order/cancelall/'+market+'/'+currency;
+    let URL = 'https://apis.coinhole.kr/v1/order/cancelall/'+market+'/'+currency;
     let nonce = getNonce();
     let signature = makeSignature(APISECRET, access_token, nonce, URL, '');
     let config = {

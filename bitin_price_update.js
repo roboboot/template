@@ -5,9 +5,11 @@ const bot = new TelegramBotApi('964723803:AAFC0iRCW2I4oWBf1Ak0MDK7lic3K04fiaQ');
 const chatId = 825830374;
 
 const request = require('request');
-const API_URL = "https://apis.korcx.com/v1";
-const APIKEY = "bb88a69d-d9e9-41a1-bda9-9c3956aab401"
-const APISECRET = "STQjXG9Iud778Kq5J4AgTgcbawK8km0G";
+const API_URL = "https://apis.coinhole.kr/v1";
+const APIKEY = 'px613966s-6563-7r29-b14s-es2wv5h7xd9'; // CONFIG!!!
+const APISECRET = '94rsn7os36315x571j2av1akrkn4x674'; // CONFIG!!!
+const market = 'KRW'; // CONFIG!!!
+const currency = 'RTR'; // CONFIG!!!
 const axios = require('axios');
 var CryptoJS = require("crypto-js");
 var querystring = require('querystring');
@@ -15,10 +17,10 @@ var https = require('https');
 let md5 = require('md5');
 var mysql = require('mysql');
 var dbconn = mysql.createConnection({
-    host     : 'bitin-test.cljmcewzltc4.ap-northeast-2.rds.amazonaws.com',
+    host     : 'rtrcoin.cljmcewzltc4.ap-northeast-2.rds.amazonaws.com', // CONFIG!!!
     user     : 'roboboot',
     password : 'fhqhqnxm123!K',
-    database : 'bitin'
+    database : 'rtr' // CONFIG!!!
 });
 const baseUrl = "openapi.digifinex.vip"
 const appKey = "15c88a954a584f" //global_wihte2
