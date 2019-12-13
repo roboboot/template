@@ -76,8 +76,8 @@ async function trade(price, amount) {
     let param = {}
     param.orderSe = type;
     param.currency = currency;
-    //param.orderQy = amount.toString());
-    param.orderQy = '10';
+    param.orderQy = amount.toString();
+    //param.orderQy = '10';
     param.orderPc = price.toString();
     param.tradeSe = '01';
     param.market = market;

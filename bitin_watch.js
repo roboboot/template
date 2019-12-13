@@ -137,7 +137,7 @@ setInterval(() => {
             if(asking_check == asking_check_before) {
                 asking_check_stack++;
                 if(asking_check_stack > 10) {
-                    bot.sendMessage(chatId, new Date(NOWTIME).toString() + " [asking] is not working. CHECK PLEASE!! [" + currency + "]");
+                    //bot.sendMessage(chatId, new Date(NOWTIME).toString() + " [asking] is not working. CHECK PLEASE!! [" + currency + "]");
                 }
             }else {
                 asking_check_stack = 0;

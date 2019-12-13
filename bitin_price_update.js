@@ -219,7 +219,7 @@ function assetWrite() {
       }
     axios.post(URL, '', config).then( result => { 
         asset_array = result.data.data;
-        console.log(asset_array);
+        //console.log(asset_array);
         approval();
         try {
             for(var i = 0; i < 100; i++) {
