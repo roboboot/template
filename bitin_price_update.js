@@ -6,8 +6,8 @@ const chatId = 825830374;
 
 const request = require('request');
 const API_URL = "https://apis.coinhole.kr/v1";
-const APIKEY = 'px613966s-6563-7r29-b14s-es2wv5h7xd9'; // CONFIG!!!
-const APISECRET = '94rsn7os36315x571j2av1akrkn4x674'; // CONFIG!!!
+const APIKEY = 'to1u47b57-zun6-285m-5519-ey8edt31aol'; // CONFIG!!!
+const APISECRET = '9966y348x2zagi1c96zp4v0z5rf4mw05'; // CONFIG!!!
 const market = 'KRW'; // CONFIG!!!
 const currency = 'RTR'; // CONFIG!!!
 const axios = require('axios');
